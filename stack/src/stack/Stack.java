@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class Stack {
 
-    private static ArrayList<String> stack = new ArrayList<String>(); // STACK IS DYNAMIC
+    private static ArrayList<String> stack = new ArrayList<String>();
     private static Integer pointer;
 
     public Stack() {
@@ -13,12 +13,8 @@ public class Stack {
     }
 
     public static void push(String item) throws Exception {
-        if (pointer == stack.size()) {
-            System.out.println("Stack overflow error");
-        } else {
-            stack.set(pointer, item);
-            pointer++;
-        }
+        stack.add(item);
+        pointer++;
     }
 
     public static String pop() throws Exception {
